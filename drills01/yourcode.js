@@ -50,7 +50,7 @@ function getAllNamesShorterThan(arr, limitOfChars) {
 
 function makeLabel(arr) {
 
-
+  return `${arr.greeting} ${arr.givenName} ${arr.familyName}\n${arr["home address"].streetNumber} ${arr["home address"].streetName}\n${arr["home address"].city}, ${arr["home address"].state} ${arr["home address"].zip}`
 }
 
 
