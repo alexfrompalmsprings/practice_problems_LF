@@ -37,6 +37,11 @@ function fitWithinVal(arr, maxValue) {
 
 
 function getAllNamesShorterThan(arr, limitOfChars) {
+  let namesResult = arr.filter((name) => {
+    return name.length < limitOfChars
+  })
+
+  return namesResult;
 
 }
 
