@@ -12,6 +12,23 @@ function sumArray(arr) {
 // console.log(sumArray([4,2,3,6,7,1,8,10,9]));
 
 function fitWithinVal(arr, maxValue) {
+  let sorted = arr //.sort((a,b) => (a -b)) //do not need to sort it ✅
+  let sum = 0;
+  let resultArr = [];
+
+  for (let i = 0; i < sorted.length; i++) {
+    let currentNum = sorted[i];
+
+    if (sum <= maxValue) {
+      sum = sum + currentNum
+      if (sum <= maxValue) {
+        resultArr.push(currentNum)
+        // console.log(sum, resultArr);
+      }
+    }
+  }
+  return resultArr
+
 
 }
 
