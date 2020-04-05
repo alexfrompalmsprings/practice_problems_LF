@@ -7,7 +7,7 @@ function getPathParts(fullUrl) {
   let firstSplit = fullUrl.split('://')
   let secondSplit = firstSplit[1].split(':')
   let thirdSplit = secondSplit[1].split('/');
-  console.log(thirdSplit);
+  // console.log(thirdSplit);
 
   let proto = firstSplit[0];
   let hostVar = secondSplit[0]
@@ -33,13 +33,24 @@ function getPathParts(fullUrl) {
     path: pathVar,
     file: fileType
   }
-  console.log(getPartsObj);
+  // console.log(getPartsObj);
 
   return getPartsObj;
 }
 
 
-function getCapitalCount() {
+function getCapitalCount(arr) {
+  let capCount = 0;
+  let capChecker = arr.forEach((word) => {
+    if(word[0] === word[0].toUpperCase()){
+      capCount++
+      console.log(`we found a word and we adding ${capCount}`)
+    }
+
+    return capCount;
+  })
+
+  return capCount;
 
 }
 
