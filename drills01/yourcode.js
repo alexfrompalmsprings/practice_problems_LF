@@ -1,5 +1,11 @@
 function sumArray(arr) {
 
+  let result = 0;
+
+  arr.forEach((num) => {
+    result = result + num;
+  })
+  return result
 
 }
 
