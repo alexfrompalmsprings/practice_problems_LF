@@ -14,8 +14,18 @@ function countOccurences(arr, word){
 // console.log(countOccurences(['dog','cat','dog','pig','canary','cat','dog'],'dog'));
 
 function wordLengths(arr){
+  let result = [];
+
+  let lenChecker = arr.forEach((word) => {
+    result.push(word.length)
+    // console.log(result)
+    return result
+  })
+
+  return result;
 
 }
+console.log(wordLengths(['who','said','this','was','a','wet','bar','on','alligators']))
 
 
 
@@ -33,7 +43,7 @@ function getMinMaxMean(arr){
   let min = sorted[0]
   let avg = sum / (sorted.length)
 
-  console.log(`here we have the min ${min}, the max ${max} && the mean ${avg}`)
+  // console.log(`here we have the min ${min}, the max ${max} && the mean ${avg}`)
 
   let result = {}
   result.min = min;
@@ -42,7 +52,7 @@ function getMinMaxMean(arr){
 
   return result;
 }
-console.log(getMinMaxMean( [5,-5,15,25,12,2]))
+// console.log(getMinMaxMean( [5,-5,15,25,12,2]))
 
 function findMode(){
 
