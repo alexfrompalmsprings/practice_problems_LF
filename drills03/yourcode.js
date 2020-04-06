@@ -81,6 +81,3 @@ function correctCalcChecker(arr) {
   return finalResult
 }
 
-function doMath() {
-
-}
