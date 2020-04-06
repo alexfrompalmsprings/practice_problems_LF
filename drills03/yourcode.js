@@ -44,7 +44,7 @@ function getCapitalCount(arr) {
   let capChecker = arr.forEach((word) => {
     if(word[0] === word[0].toUpperCase()){
       capCount++
-      console.log(`we found a word and we adding ${capCount}`)
+      // console.log(`we found a word and we adding ${capCount}`)
     }
 
     return capCount;
@@ -54,8 +54,31 @@ function getCapitalCount(arr) {
 
 }
 
-function correctCalcChecker() {
+function correctCalcChecker(arr) {
+  let finalResult = [];
 
+  arr.forEach((elem) =>{
+    console.log(elem.op);
+
+
+    if(elem.op === "+" && (elem.num1 + elem.num2 === elem.result)){
+      finalResult.push(elem)
+      console.log(finalResult)
+    } else if(elem.op === "-" && (elem.num1 - elem.num2 === elem.result)){
+      finalResult.push(elem)
+      console.log(finalResult)
+    } else if(elem.op === "/" && (elem.num1 / elem.num2 === elem.result)){
+      finalResult.push(elem)
+      console.log(finalResult)
+    } else if(elem.op === "*" && (elem.num1 * elem.num2 === elem.result)){
+      finalResult.push(elem)
+      console.log(finalResult)
+    }
+
+    return finalResult
+  })
+
+  return finalResult
 }
 
 function doMath() {
